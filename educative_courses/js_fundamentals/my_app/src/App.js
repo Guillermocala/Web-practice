@@ -32,8 +32,18 @@ export default class App extends React.Component {
 
         const saludo = () => alert("Soy una funcion flecha");
 
+        const numeros = [1, 2, 3, 4, 5];
+        const numerosAmplificados = numeros.map(n => n * 2);
+
         return (
             <div>
+                {
+                    <>
+                        <h4>Ejercicio map</h4>
+                        <p>El array normal es: {numeros.map(num => <li>{num}</li> )}</p>
+                        <p>El array amplificado es: {numerosAmplificados.map(num => <li>{num}</li> )}</p>
+                    </>
+                }
                 {
                     showUsers ? (
                         <>
